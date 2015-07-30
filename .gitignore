@@ -24,4 +24,5 @@ pkginfo/
 shell/
 skin/
 var/
+.htaccess
 
