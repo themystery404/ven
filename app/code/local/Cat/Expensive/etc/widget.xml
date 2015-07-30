@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgets>
+    <expensive_topsearches type="expensive/topsearches" translate="name description" module="expensive">
+        <name>The Most Expensive Products</name>
+        <description type="desc">The Most Expensive Products</description>
+    </expensive_topsearches>
+</widgets>

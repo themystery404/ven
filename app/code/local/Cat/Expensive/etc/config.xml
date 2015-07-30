@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Cat_Expensive>
+            <version>0.0.1</version>
+        </Cat_Expensive>
+    </modules>
+    <global>
+        <helpers>
+            <expensive>
+                <class>Cat_Expensive_Helper</class>
+            </expensive>
+        </helpers>
+        <blocks>
+            <expensive>
+                <class>Cat_Expensive_Block</class>
+            </expensive>
+        </blocks>
+    </global>
+</config>
