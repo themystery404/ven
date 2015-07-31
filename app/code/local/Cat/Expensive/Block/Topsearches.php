@@ -5,15 +5,23 @@ class Cat_Expensive_Block_Topsearches
 {
     protected function _toHtml()
     {
-        $pageTitle = '';
-        $headBlock = $this->getLayout()->getBlock('head');
-        if ($headBlock) {
-            $pageTitle = $headBlock->getTitle();
+        $products_count = $this->getData("products_count");
+        $productCollection = Mage::getModel('catalog/product')
+            ->getCollection()
+            ->addAttributeToSort('price', 'DESC')
+            ->addAttributeToFilter('visibility', 4)
+            ->addAttributeToSelect('*')
+            ->setOrder('price', 'desc');
+        $productCollection->getSelect()->limit($products_count);
+        $html = '<div class="widget-expensive-block">' ;
+        $html .= '<p class="widget-expensive-title">The Most Expensive Products</p>' ;
+
+        foreach($productCollection as $product){
+            $html .=  "<a href='".$product->getProductUrl()."'>".$product->getName()."</a></br>";
         }
-
-        $html = 'The widget is calling';
-
+        $html .= '</div>';
         return $html;
+
     }
 
 };

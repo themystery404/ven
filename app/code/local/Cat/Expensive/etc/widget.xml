@@ -3,5 +3,14 @@
     <expensive_topsearches type="expensive/topsearches" translate="name description" module="expensive">
         <name>The Most Expensive Products</name>
         <description type="desc">The Most Expensive Products</description>
+        <parameters>
+            <products_count translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <value>4</value>
+                <label>Number of Products to Display</label>
+                <type>text</type>
+            </products_count>
+        </parameters>
     </expensive_topsearches>
 </widgets>
