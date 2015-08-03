@@ -1,0 +1,9 @@
+<div class="widget-expensive-block red">
+    <p class="widget-expensive-title">The Most Expensive Products</p>
+    <?php
+        $productCollection = $this->getExpensiveProducts();
+        foreach($productCollection as $product) {
+    ?>
+        <a href='<?php echo $product->getProductUrl()?>'> <?php echo $product->getName()?> </a></br>
+     <?php }?>
+</div>

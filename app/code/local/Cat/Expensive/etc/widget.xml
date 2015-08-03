@@ -11,6 +11,23 @@
                 <label>Number of Products to Display</label>
                 <type>text</type>
             </products_count>
+            <template>
+                <required>1</required>
+                <visible>1</visible>
+                <label>Template</label>
+                <type>select</type>
+                <value>catalog/product/widget/new/content/green_grid.phtml</value>
+                <values>
+                    <default translate="label">
+                        <value>cat/expensive/green_grid.phtml</value>
+                        <label>Green Products Grid Template</label>
+                    </default>
+                    <list translate="label">
+                        <value>cat/expensive/red_grid.phtml</value>
+                        <label>Red Products List Template</label>
+                    </list>
+                </values>
+            </template>
         </parameters>
     </expensive_topsearches>
 </widgets>
